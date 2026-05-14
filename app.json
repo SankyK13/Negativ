@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "Film Negative Converter",
+    "slug": "negative-to-positive",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0A0A0F"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.filmneg.converter",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs camera access to photograph film negatives.",
+        "NSPhotoLibraryUsageDescription": "This app needs photo library access to save converted images.",
+        "NSPhotoLibraryAddUsageDescription": "This app needs permission to save converted photos to your library."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A0F"
+      },
+      "package": "com.filmneg.converter",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Film Negative Converter to access your camera to photograph negatives."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Film Negative Converter to save converted photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Film Negative Converter to access your photos."
+        }
+      ],
+      "expo-font"
+    ]
+  }
+}
